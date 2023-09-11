@@ -1,0 +1,6 @@
+name: DiverseLogger
+version: 1.0
+author: Jok1r
+main: ru.jok1r.diverseLogger.Main
+commands:
+  dlogger:
