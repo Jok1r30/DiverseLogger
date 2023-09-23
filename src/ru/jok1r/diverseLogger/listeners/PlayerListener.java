@@ -77,7 +77,7 @@ public class PlayerListener implements Listener {
                 message = message.replaceAll("%n", stack.getTypeId() + "");
             }
 
-            message = message.replaceAll("%u", uuid.toString());
+            message = message.replaceAll("%u", uuid.toString()).replaceAll("%i", stack.getAmount() + "");
             message = message.replaceAll("%p", event.getPlayer().getName());
             message = message.replaceAll("%d", this.plugin.getTime());
             message = message.replaceAll("%x", String.valueOf((int) event.getPlayer().getLocation().getX()));
@@ -102,7 +102,7 @@ public class PlayerListener implements Listener {
             } else {
                 message = message.replaceAll("%n", stack.getTypeId() + "");
             }
-            message = message.replaceAll("%u", event.getItemDrop().getUniqueId() + "");
+            message = message.replaceAll("%u", event.getItemDrop().getUniqueId() + "").replaceAll("%i", stack.getAmount() + "");;
             message = message.replaceAll("%d", this.plugin.getTime());
             message = message.replaceAll("%x", String.valueOf((int) event.getPlayer().getLocation().getX()));
             message = message.replaceAll("%y", String.valueOf((int) event.getPlayer().getLocation().getY()));

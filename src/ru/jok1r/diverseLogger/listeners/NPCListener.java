@@ -24,7 +24,7 @@ public class NPCListener implements Listener {
 
         String message = this.plugin.npcDrop.replaceAll("%d", this.plugin.getTime());
         message = message.replaceAll("%p", event.getPlayer());
-        message = message.replaceAll("%i", event.getDrop().getItemMeta().getDisplayName());
+        message = message.replaceAll("%n", event.getDrop().getItemMeta().getDisplayName()).replaceAll("%i", event.getDrop().getAmount() + "");
         try {
             this.plugin.logging(message);
         } catch (IOException exception) {
